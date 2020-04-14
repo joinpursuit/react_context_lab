@@ -1,4 +1,4 @@
-import {TIME} from '../Actions/ClockActions'
+import {TIME} from '../Actions/ActionTypes'
 const ClockReducer = (state=0, action)=>{
 switch (action.type) {
     case TIME:
