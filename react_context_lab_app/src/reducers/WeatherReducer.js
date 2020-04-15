@@ -1,5 +1,5 @@
 import { FETCH_WEATHER } from "../actions/actionsTypes";
-const WeatherReducer = (state = [], action) => {
+const WeatherReducer = (state = ["weather"], action) => {
   switch (action.type) {
     case FETCH_WEATHER:
       return [action.payload, ...state];

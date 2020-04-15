@@ -2,11 +2,10 @@ import React, { createContext, useState, useReducer } from "react";
 import WeatherReducer from "../reducers/weatherReducer";
 export const WeatherContext = createContext();
 
-const [weather, dispatch] = useReducer(WeatherReducer, []);
-
 const WeatherProvider = (props) => {
+  const [weather, dispatch] = useReducer(WeatherReducer, []);
   return (
-    <WeatherContext.Provider value={{ count, dispatch }}>
+    <WeatherContext.Provider value={{ weather, dispatch }}>
       {props.children}
     </WeatherContext.Provider>
   );
