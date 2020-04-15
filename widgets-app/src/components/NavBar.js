@@ -5,8 +5,8 @@ const NavBar = () => {
   return (
     <nav>
       <NavLink className="route" exact to={"/"}>Home</NavLink>
-      {/* <NavLink className="route" exact to={"/"}>Home</NavLink> */}
-      {/* <NavLink className="route" exact to={"/"}>Home</NavLink> */}
+      <NavLink className="route"  to={"/weather"}>Weather</NavLink>
+      <NavLink className="route" to={"/clock"}>Clock</NavLink>
     </nav>
   )
 }
