@@ -59,6 +59,9 @@
   /* padding: 10px;
   box-shadow: 5px 10px 8px #b8c1ec; */
 }
+.link:hover {
+  transform: scale(1.1);
+}
 
 #weather {
   /* background-image: url("../../../images/sun.svg"); */
@@ -68,4 +71,5 @@
 }
 
 .link:active {
+  transform: scale(1.2);
 }
