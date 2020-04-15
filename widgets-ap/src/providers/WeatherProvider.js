@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
+import "../css/WeatherProvider.css";
 export const WeatherContext = createContext();
 
 const WeatherProvider = (props) => {
@@ -17,15 +18,38 @@ const WeatherProvider = (props) => {
         }
     }
 
-    useEffect(() => {
-        getForecast()
-    }, [])
+    // useEffect(() => {
+    //     getForecast()
+    // }, [])
 
-    
+    const getCity = (city) => {
+        return(
+            <div className="cityInfo">
+                <h1>{city.name}</h1>
+                <h4>Country: {city.country}</h4>
+                <h4>Latitude: {city.coord.lat}</h4>
+                <h4>Longitude: {city.coord.lon}</h4>
+            </div>
+        )
+    }
 
+    const getInfo = forecast.map((forecastInfo, i) => {
+        if(i < 5) {
+            return(
+                <ul key={i}>
+                    <li>Date: {forecastInfo.dt_txt}</li>
+                    <li>Current Weather: {forecastInfo.weather[0].description}</li>
+                    <li>Current Temp: {forecastInfo.main.temp}</li>
+                    <li>High: {forecastInfo.main.temp_max}</li>
+                    <li>Low: {forecastInfo.main.temp_min}</li>
+                <li>Humidity: {forecastInfo.main.humidity}%</li>
+            </ul>
+            )
+        }
+    })
     
     return (
-        <WeatherContext.Provider value ={{forecast, city}}>
+        <WeatherContext.Provider value ={{ getCity, getInfo, getForecast}}>
             {props.children}
         </WeatherContext.Provider>
     )
