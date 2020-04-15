@@ -1,6 +1,6 @@
-import { FETCH_WEATHER } from "./actionsTypes";
+import { FETCH_WEATHER } from "./actionTypes";
 
-export const weatherDisplay = (weather) => ({
+export const fetchWeather = (weather) => ({
   type: FETCH_WEATHER,
   payload: weather,
 });

@@ -1,9 +1,9 @@
-import React, { createContext, useState, useReducer } from "react";
-import WeatherReducer from "../reducers/weatherReducer";
+import React, { createContext, useReducer } from "react";
+import WeatherReducer from "../reducers/WeatherReducer";
 export const WeatherContext = createContext();
 
 const WeatherProvider = (props) => {
-  const [weather, dispatch] = useReducer(WeatherReducer, []);
+  const [weather, dispatch] = useReducer(WeatherReducer);
   return (
     <WeatherContext.Provider value={{ weather, dispatch }}>
       {props.children}
