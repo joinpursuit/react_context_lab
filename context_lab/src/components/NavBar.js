@@ -1,19 +1,20 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "../css/NavBar.css";
 
 const NavBar = () => {
   return (
-    <div>
+    <div className="navBar">
       <nav>
         <ul>
-          <li>SunnyDaze</li>
+          <li id="navTitle">SunnyDaze</li>
           <li>
-            <NavLink exact to="/">
+            <NavLink exact to="/" className="link">
               HOME
             </NavLink>
           </li>
           <li>
-            <NavLink exact to="/weather">
+            <NavLink exact to="/weather" className="link">
               WEATHER
             </NavLink>
           </li>

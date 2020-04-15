@@ -10,15 +10,18 @@ import Weather from "../src/components/Weather";
 function App() {
   return (
     <div className="App">
-    <NavBar/>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/weather">
-          <Weather />
-        </Route>
-      </Switch>
+      {" "}
+      <NavBar />
+      <div className="body">
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/weather">
+            <Weather />
+          </Route>
+        </Switch>
+      </div>
     </div>
   );
 }

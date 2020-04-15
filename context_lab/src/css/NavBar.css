@@ -1,0 +1,45 @@
+.navBar {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  position: sticky;
+  margin: auto;
+  align-items: center;
+  background-color: rgb(80, 144, 239);
+  /* background-color: rgb(53, 107, 188); */
+  height: 100px;
+  box-shadow: 10px 7px 7px 0px gold;
+}
+
+.link {
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-decoration: none;
+}
+
+.link:active,
+.link:hover {
+  color: gold;
+  font-weight: bolder;
+  text-emphasis: none;
+}
+
+#navTitle {
+  font-size: large;
+  color: gold;
+  font-weight: bolder;
+}

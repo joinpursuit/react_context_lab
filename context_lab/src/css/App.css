@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  font-family: 'Coustard', serif;
+  font-weight: normal;
+}
+
+.body {
+  margin-top: 5%;
 }
 
 .App-logo {
