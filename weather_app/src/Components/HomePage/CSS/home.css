@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../../../fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MonsterratRegular";
+  src: url("../../../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+.homeDiv {
+  /* margin-top: 300px;
+  width: 40%;
+  margin: auto;
+  background-color: #fef6e4; */
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+
+  margin-top: 300px;
+  width: 56%;
+  margin: auto;
+  background-color: #d8eefe;
+  height: 400px;
+  align-items: center;
+  border: black;
+  border-width: thick;
+  border-style: dotted;
+}
+
+h1 {
+  /* font-family: RobotoRegular;
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #f582ae; */
+
+  font-family: RobotoRegular;
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #094067;
+  margin-top: 70px;
+}
+
+p {
+  /* font-family: MonsterratRegular;
+  font-size: 25px;
+  color: #172c66;
+  font-weight: 500; */
+
+  font-family: MonsterratRegular;
+  font-size: 25px;
+  color: #5f6c7b;
+  font-weight: 500;
+  width: inherit;
+}

@@ -22,9 +22,9 @@
   /*  */
 
   /* background-color: #d4d8f0; */
-  background-color: #02b9f4;
-  height: 700px;
 
+  /* background-color: #02b9f4;
+  height: 700px;
   margin-top: 31px;
   padding: 10px;
   box-shadow: 5px 10px 8px #b8c1ec;
@@ -34,8 +34,21 @@
   border-width: 1.5px;
   margin-left: 70px;
   width: 150px;
+  border-color: #01c6f7; */
+
   /* border-color: #b8c1ec; */
-  border-color: #01c6f7;
+
+  background-color: #3da9fc;
+  height: 600px;
+  margin-top: 31px;
+  padding: 10px;
+  /* box-shadow: 5px 10px 8px #b8c1ec; */
+  box-shadow: 5px 10px 8px #90b4ce;
+  border-radius: 5px;
+  border-style: solid;
+  /* border-width: 2.5px; */
+  margin-left: 70px;
+  width: 150px;
 }
 
 .container {
