@@ -7,6 +7,8 @@ import NavBar from './NavBar'
 import Home from './components/Home/Home'
 import Weather from './components/Weather/Weather'
 import Clock from './components/Clock/Clock'
+import ThemeProvider from './providers/ThemeProvider'
+
 function App() {
 
   return (
