@@ -7,8 +7,8 @@ const NavBar = () => {
   return (
     <div className="NavBar">
       <NavLink className="Home" exact to="/">Home</NavLink>
-      <NavLink className="Clock" exact to="/clock">Clock</NavLink>
-      <NavLink className="Weather" exact to="/weather">Weather</NavLink>
+      <NavLink className="Clock" to="/clock">Clock</NavLink>
+      <NavLink className="Weather" to="/weather">Weather</NavLink>
    
     </div>
   );

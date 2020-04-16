@@ -1,14 +1,14 @@
+import React, {createContext} from 'react'
 import React, { useReducer, createContext} from 'react'
-
 import ClockReducer from '../Reducers/ClockReducer'
 
-export const CounterContext = createContext()
+export const TimeContext = createContext()
 
 const ClockProvider = (props)=>{
     const [time, dispatch] = useReducer(ClockReducer, 0)
-    return(  <CounterContext.Provider value={{time, dispatch}}>
+    return(  <TimeContext.Provider value={{time, dispatch}}>
         {props.children}
-      </CounterContext.Provider>
+      </TimeContext.Provider>
   )
 }
 export default ClockProvider

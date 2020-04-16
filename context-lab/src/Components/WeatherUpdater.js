@@ -1,9 +1,11 @@
 import React, {useContext} from 'react'
-import {CounterContext} from '../Providers/WeatherProvider'
-import {} from '../Actions/WeatherActions'
+import {WeatherContext} from '../Providers/WeatherProvider'
+import {weather} from '../Actions/WeatherActions'
+import axios from 'axios'
+
 
 const WeatherUpdater =()=>{
-    const { dispatch } = useContext(CounterContext);
+    const { dispatch } = useContext(WeatherContext);
     return(
         <div>
             <button>Toggle Weather</button>

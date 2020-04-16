@@ -1,2 +1,2 @@
 import {TIME} from './ActionTypes'
-export const time = ()=>({type:TIME})
+export const time = (time)=>({type:TIME, payload:time})

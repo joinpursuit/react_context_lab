@@ -1,2 +1,2 @@
 import {WEATHER} from './ActionTypes'
-export const weather = ()=>({type:WEATHER})
+export const weather = (weather)=>({type:WEATHER, payload:weather,})
