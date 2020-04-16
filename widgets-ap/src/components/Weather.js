@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import { WeatherContext } from "../providers/WeatherProvider";
+import "../css/Weather.css";
 
 const Weather = () => {
     const {getCity} = useContext(WeatherContext);
@@ -9,10 +10,9 @@ const Weather = () => {
     return(
         <div className="weather">
             <div className="city">
-                {getCity}
+                <h3>{getCity()}</h3>
             </div>
             <button onClick={getForecast}>Get 5 Day Forecast</button>
-            {/* <h3>City{city}</h3> */}
             <h3>Weather{getInfo}</h3>
         </div>
     )
