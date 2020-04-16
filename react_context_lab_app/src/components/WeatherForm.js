@@ -8,24 +8,35 @@ const WeatherForm = () => {
   const { dispatch } = useContext(WeatherContext);
   const [input, setInput] = useState("");
 
-  const getWeather = async (e) => {
+  const getWeatherByZipCode = async (e) => {
     e.preventDefault();
 
     try {
-      let res = await axios.get(
-        `http://api.openweathermap.org/data/2.5/forecast?zip=${input}&APPID=${API_KEY}`
+      let res_current = await axios.get(
+        `https://api.openweathermap.org/data/2.5/weather?zip=${input}&appid=${API_KEY}`
       );
 
-      await dispatch(fetchWeather(res.data));
+      let res_forecast = await axios.get(
+        `https://api.openweathermap.org/data/2.5/forecast?zip=${input}&APPID=${API_KEY}`
+      );
+
+      await dispatch(
+        fetchWeather({
+          location: res_forecast.data.city,
+          current: res_current,
+          forecast: res_forecast.data.list,
+        })
+      );
     } catch (error) {
+      console.log(error);
       //   dispatch(displayErrors(error.message));
     }
   };
 
   return (
-    <form onSubmit={getWeather}>
+    <form onSubmit={getWeatherByZipCode}>
       <input
-        type="number"
+        type="text"
         pattern="[0-9]{5}"
         placeholder="Enter your zip code"
         value={input}

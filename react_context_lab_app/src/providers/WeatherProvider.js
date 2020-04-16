@@ -4,6 +4,7 @@ export const WeatherContext = createContext();
 
 const WeatherProvider = (props) => {
   const [weather, dispatch] = useReducer(WeatherReducer);
+
   return (
     <WeatherContext.Provider value={{ weather, dispatch }}>
       {props.children}
