@@ -13,6 +13,11 @@
 
 .link {
   text-decoration: none;
+  font-weight: bold;
+}
+
+.link:visited {
+  color: gold;
 }
 
 ul {
@@ -39,7 +44,7 @@ li {
 }
 
 #navTitle {
-  font-size: large;
+  font-size: larger;
   color: gold;
   font-weight: bolder;
 }

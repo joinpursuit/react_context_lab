@@ -1,0 +1,6 @@
+.weatherDiv {
+    background-size: cover;
+    height: 100vh;
+    background: rgb(243,248,249);
+    background: linear-gradient(50%, rgba(243,248,249,0.9178046218487395) 0%, rgba(110,210,240,1) 100%);
+}
