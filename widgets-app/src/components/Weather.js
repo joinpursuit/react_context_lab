@@ -1,20 +1,22 @@
-import React,{ useContext} from "react";
+import React,{ useContext, useState} from "react";
 import { WeatherContext } from "../provider/WeatherProvider";
-import { weather } from "../actions/WeatherActions";
+import { weather } from "../actions/weatherActions";
 const Weather = () => {
-  const { Weather, dispatch } = useContext(WeatherContext);
+  const [input, setInput] = useState("")
+  const { dispatch, location } = useContext(WeatherContext);
 
   const click = (e) => {
     e.preventDefault();
-    dispatch(weather("THis is the new input"));
+    dispatch(weather(input));
+    setInput("")
   }
-  console.log("this is the weather state", Weather);
+  console.log("this is the weather state", location);
   return (
     <div className="Weather">
-  
-    this is Weather
-      
-        <button onClick={(e)=>click(e)}>click</button>
+      <form onSubmit={click}>
+        <input type="text" value={input} onChange={e=>setInput(e.target.value)}/>
+        <button>click</button>
+      </form>
     </div>
   )
 }

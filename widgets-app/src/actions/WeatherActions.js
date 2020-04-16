@@ -1,2 +1,2 @@
-import { WEATHER } from './actionTypes'
-export const weather = (input) => ({ type: WEATHER, payload:input })
+import { WEATHER } from "./actionTypes"
+export const weather = (location) => ({ type: WEATHER, payload:location })

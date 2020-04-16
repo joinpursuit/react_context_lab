@@ -1,17 +1,15 @@
-import React, { createContext } from "react";
-import React, {useReducer, createContext} from "react"
-import ClockReducer from "../reducers/WeatherReducer"
+// import React, {useReducer, createContext} from "react"
+// import ClockReducer from "../reducers/ClockReducer"
+// export const HomeContext = createContext();
 
-export const HomeContext = createContext();
+// const ClockProvider = (props) => {
+//   const [Clock, dispatch] = UseReducer(ClockReducer, 0);
 
-const ClockProvider = (props) => {
-  const Clock= useReducer(ClockReducer);
-  const [Clock, dispatch] = UseReducer(ClockReducer);
-  return (<HomeContext.Provider return value={{ Home }}>{props.children}</HomeContext.Provider>)
+//   return (<ClockContext.Provider return value={{ Clock, dispatch }}>{props.children}</ClockContext.Provider>)
   
-}
+// }
 
-export default ClockProvider;
+// export default ClockProvider;
 
 
 

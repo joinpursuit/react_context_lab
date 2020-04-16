@@ -1,2 +1,2 @@
-import { CLOCK } from "./actionTypes"
-export const Clock = () => ({type: Clock})
+// import { CLOCK } from "./actionTypes"
+// export const setTime = (time) => ({type: CLOCK, payload:time})

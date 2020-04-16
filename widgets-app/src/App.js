@@ -1,15 +1,16 @@
 import React, {createContext} from "react";
 import NavBar from "./components/NavBar";
-import actionType from "./actions/actionTypes";
-import ClockProvider from "./provider/ClockProvider";
-import Home from "./components/Home"
-import Weather from "./components/Weather"
 
 import WeatherProvider from "./provider/WeatherProvider";
-import Clock from "./components/Clock"
+// import ClockProvider from "./provider/ClockProvider";
+
+import Home from "./components/Home";
+import Weather from "./components/Weather";
+// import Clock from "./components/Clock";
+
 import { Route, Switch } from "react-router-dom";
 import './App.css';
-export const Context = createContext();
+// export const Context = createContext();
 
 function App() {
   return (
@@ -23,9 +24,9 @@ function App() {
           <Route path={"/weather"} component={Weather} />
       </WeatherProvider>
           
-      <ClockProvider>
+      {/* <ClockProvider>
         <Route path={"/clock"} component={Clock} />
-      </ClockProvider>
+      </ClockProvider> */}
         
         </Switch>
   
