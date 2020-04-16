@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+// import '../css/NavBar.css'
 // import Weather from '../components/WeatherComponenet'
 // import Clock from '../components/ClockComponent'
 
@@ -30,8 +31,6 @@ const NavBar = () => {
           </li>
 
         </ul>
-       
-       
        </nav>
 
        </div>  

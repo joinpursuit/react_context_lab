@@ -1,19 +1,23 @@
 import React from 'react';
-// import "../css/AppHome.css";
+// import "../css/Home.css";
 
 
 const Home = () => {
   return (
-   <div className="helloDiv">
+   <div className="mainDiv">
         <div className="welcomeDiv"> 
-            <h1> 
+            <h1 className="styleH1"> 
                 Welcome to Uduakabasi's Weather App!
             </h1>
         </div>
 
         <div className="updateDiv"> 
-            <h3 className="updatesDiv">
-                Co-void-19 Pandemic. Click here to learn more about how to stay safe! 
+            <h2 className="styleH2">
+                Co-void-19 Pandemic.
+            </h2>
+
+            <h3 className="styleH3"> 
+            Learn more 
             </h3>
         </div>
     </div>
