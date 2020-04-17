@@ -1,5 +1,5 @@
 import React from 'react';
-// import "../css/Home.css";
+import "../css/Home.css";
 
 
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
             </h2>
 
             <h3 className="styleH3"> 
-            Learn more 
+            <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html"> Learn more </a>
             </h3>
         </div>
     </div>

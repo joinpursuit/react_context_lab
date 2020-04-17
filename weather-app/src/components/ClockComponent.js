@@ -1,5 +1,5 @@
 import React from 'react'
-// import '../css/Clock.css'
+import '../css/Clock.css'
 
 const Clock = () => {
 
