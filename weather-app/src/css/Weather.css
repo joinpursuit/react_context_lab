@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.mainDivYo {
+    background-image: url('https://storage.ning.com/topology/rest/1.0/file/get/70945900?profile=RESIZE_1024x1024');
+    height: 100vh;
+    /* border-image-repeat: stretch; */
+   
+
+
+}
+
+.yurrrDiv {
+    padding-top: 180px;
+    color: lightblue;
+    padding-left: 405px;
+    font-size: smaller;
+}
+
+.enterDiv {
+    padding-left: 70px;
+}
