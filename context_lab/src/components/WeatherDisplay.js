@@ -13,7 +13,7 @@ const WeatherDisplay = ({ location }) => {
     try {
       let res = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}
         `);
-      //   debugger;
+        debugger;
       setForecast(res.data.daily);
       console.log(forecast);
     } catch (error) {

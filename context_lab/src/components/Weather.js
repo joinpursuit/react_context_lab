@@ -10,10 +10,12 @@ export const farenheit = temp => {
 
 const Weather = () => {
   const [location, setLocation] = useState([]);
+  const [yourLocation, setYourLocation] = useState([]);
   const [temperature, setTemperature] = useState([]);
+  const [weather, setWeather] = useState([]);
   const [feelsLike, setFeelsLike] = useState("");
-  const [minTemp, setMinTemp] = useState("");
-  const [maxTemp, setMaxTemp] = useState("");
+  const [uvi, setUvi] = useState("");
+  const [dew, setDew] = useState("");
   const [pressure, setPressure] = useState("");
   const [humidity, setHumidity] = useState("");
   // const [currentStats, setCurrentStats] = useState([]);
@@ -29,22 +31,25 @@ const Weather = () => {
   console.log(location);
 
   let lat = location[0];
-  let long = location[1];
+  let lon = location[1];
 
   const getWeather = async () => {
     try {
       let realTemp = 0;
-      let res = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`
-      );
+      //   `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`
+      // );
+      let res = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}
+      `);
       // debugger;
-      const stat = res.data.main;
+      setYourLocation(res.data.timezone);
+      const stat = res.data.current;
       let temp = stat.temp;
       realTemp = Math.round(farenheit(temp));
       setTemperature(realTemp);
+      setWeather(res.data.current.weather[0].description);
       setFeelsLike(Math.round(farenheit(stat.feels_like)));
-      setMinTemp(Math.round(farenheit(stat.temp_min)));
-      setMaxTemp(Math.round(farenheit(stat.temp_max)));
+      setUvi(Math.round(stat.uvi));
+      setDew(Math.round(farenheit(stat.dew_point)));
       setPressure(stat.pressure);
       setHumidity(stat.humidity);
       // console.log(feelsLike, minTemp, maxTemp, pressure, humidity)
@@ -60,21 +65,20 @@ const Weather = () => {
 
   return (
     <div>
-      <h1>Weather</h1>
-      <h2>Current Location: </h2>
-      <p>Your Coordinates: {location} </p>
+      <h1 id="heading">Weather</h1>
+      <h2> {yourLocation} </h2>
       <button onClick={getWeather}>Get Your Local Weather</button>
-      <p> Your Current Temperature: {temperature}&#x00B0;</p>
       <div>
-        <ul>
-          <li>Feels like: {feelsLike}&#x00B0;</li>
-          <li>Today's low: {minTemp}&#x00B0;</li>
-          <li>Today's high: {maxTemp}&#x00B0;</li>
-          <li>Pressure: {pressure}</li>
-          <li>Humidity: {humidity}</li>
+        <h2> {`${temperature}`}&#x00B0;</h2>
+        <h2>{weather}</h2>
+        <ul className="today">
+          <li><p>Feels Like:</p>{feelsLike}&#x00B0;</li>
+          <li><p>UVI:</p>{uvi}</li>
+          <li><p>Dew:</p>{dew}&#x00B0;</li>
+          <li><p>Pressure:</p>{pressure}</li>
+          <li><p>Humidity:</p>{humidity}</li>
         </ul>
       </div>
-
       <WeatherDisplay location={location} />
     </div>
   );

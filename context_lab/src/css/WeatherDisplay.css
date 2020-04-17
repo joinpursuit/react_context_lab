@@ -1,5 +1,6 @@
 .displayDiv {
   margin-bottom: 50px;
+
 }
 
 .showWeek {
@@ -8,14 +9,14 @@
 }
 
 .weeklyForecast {
-  display: table;
+  display: grid;
   justify-content: space-around;
   margin: auto;
 }
 
 li > h2 {
-    font-size: 18pt;
-    color: cadetblue;
+  font-size: 18pt;
+  color: cadetblue;
 }
 
 .weekUl > li {
@@ -29,7 +30,6 @@ li > h2 {
   color: darkcyan;
   font-size: 12pt;
   background-color: rgba(226, 243, 247, 0.603);
-  
 }
 
 li > * {

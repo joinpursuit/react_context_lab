@@ -1,7 +1,15 @@
 .App {
+  height: 100vh;
   text-align: center;
   font-family: 'Coustard', serif;
   font-weight: normal;
+  /* background: linear-gradient(
+    to bottom right,
+    rgba(190, 239, 248, 0.589) 0%,
+    rgba(57, 153, 241, 0.493) 50%,
+    rgba(255, 230, 0, 0.513) 50%,
+    rgba(247, 143, 6, 0.705) 100%
+  ); */
 }
 
 .body {

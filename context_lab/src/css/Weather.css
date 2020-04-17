@@ -1,7 +1,62 @@
 .weatherDiv {
-    background-size: cover;
-    height: 100vh;
-    background: rgb(243,248,249);
-    background: linear-gradient(50%, rgba(243,248,249,0.9178046218487395) 0%, rgba(110,210,240,1) 100%);
+  margin: auto;
+  background-size: cover;
+  height: 100vh;
+  background: rgb(243, 248, 249);
+  background: linear-gradient(
+    50%,
+    rgba(243, 248, 249, 0.9178046218487395) 0%,
+    rgba(110, 210, 240, 1) 100%
+  );
 }
 
+#heading {
+  font-size: 36pt;
+  color: black;
+}
+
+h3 {
+  color: darkslategrey;
+  font-size: 28pt;
+}
+
+h2 {
+  color: darkcyan;
+}
+
+h1 {
+  color: cadetblue;
+  font-size: 28pt;
+}
+
+.today {
+  margin: auto;
+  display: flex;
+  height: auto;
+  width: fit-content;
+  text-align: center;
+}
+
+.today > li {
+  margin: 50px 5px 50px 5px;
+  justify-content: space-around;
+  font-weight: bold;
+  flex-flow: wrap;
+  width: 100px;
+  font-size: small;
+  text-align: center;
+  justify-items: center;
+  padding: 15px 10px 10px 0px;
+  height: 5.5em;
+  color: rgb(0, 87, 87);
+  border: 2px lightgoldenrodyellow;
+  border-radius: 25px 0px 25px 0px;
+  background-color: rgba(80, 144, 239, 0.555);
+  box-shadow: 5px 3px 2px 1px gold;
+  border-style: outset;
+}
+
+li > p {
+    color: darkcyan;
+    font-size: 1em;
+}
