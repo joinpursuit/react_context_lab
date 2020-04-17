@@ -1,44 +1,59 @@
 import React, { useContext } from "react";
 import { WeatherContext } from "../providers/WeatherProvider";
+import API_KEY from "../secrets";
 
 const WeatherDisplay = () => {
   const { weather } = useContext(WeatherContext);
   debugger;
   return (
     <div className="weatherDisplay">
-      {/* weather && weather.city && weather.city.name */}
-      {weather?.name ? <h3>{weather.name}</h3> : null}
-      {weather?.weather[0]?.description ? (
-        <p>{weather.weather[0].description}</p>
+      {weather?.current?.data?.name ? (
+        <h3>{weather.current.data.name}</h3>
       ) : null}
-      {weather?.weather[0]?.icon ? (
+      {weather?.current?.data?.weather[0]?.description ? (
+        <p>{weather.current.data.weather[0].description}</p>
+      ) : null}
+      {weather?.current?.data?.weather[0]?.icon ? (
         <img
-          src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+          src={`http://openweathermap.org/img/wn/${weather.current.data.weather[0].icon}@2x.png`}
         />
       ) : null}
-      {weather?.main?.temp ? (
+      {weather?.current?.data?.main?.temp ? (
         <>
           <p>Current temperature:</p>
-          <h3>{Math.floor(((weather.main.temp - 273.15) * 9) / 5 + 32)}°F</h3>
+          <h3>
+            {Math.floor(
+              ((weather.current.data.main.temp - 273.15) * 9) / 5 + 32
+            )}
+            °F
+          </h3>
         </>
       ) : null}
-      {weather?.main?.temp ? (
+      {weather?.current?.data?.main?.temp ? (
         <>
           <p>High:</p>
           <h3>
-            {Math.floor(((weather.main.temp_max - 273.15) * 9) / 5 + 32)}°F
+            {Math.floor(
+              ((weather.current.data.main.temp_max - 273.15) * 9) / 5 + 32
+            )}
+            °F
           </h3>
         </>
       ) : null}
-      {weather?.main?.temp ? (
+      {weather?.current?.data?.main?.temp ? (
         <>
           <p>Low:</p>
           <h3>
-            {Math.floor(((weather.main.temp_min - 273.15) * 9) / 5 + 32)}°F
+            {Math.floor(
+              ((weather.current.data.main.temp_min - 273.15) * 9) / 5 + 32
+            )}
+            °F
           </h3>
         </>
       ) : null}
-      <h3>5 Day Forecast</h3>
+
+      <h1>5 Day Forecast</h1>
+      {weather?.forecast ? weather.forecast.map((date) => {}) : null}
     </div>
   );
 };
