@@ -44,12 +44,10 @@ const Weather = () => {
 
   return (
     <div className="weather">
+      <WeatherForm />
       <h1>Weather</h1>
       <h1>Current Location</h1>
-      {`latitude: ${location.lat}, longitude: ${location.long}`}
-      <WeatherForm />
       <WeatherDisplay />
-      {/* {weather === true ? <WeatherDisplay /> : null} */}
     </div>
   );
 };
