@@ -1,8 +1,46 @@
-.weeklyForecast {
-  display: grid;
+.displayDiv {
+  margin-bottom: 50px;
 }
 
-.weatherForecast > li {
-  border: 1px solid lightskyblue;
-  padding-bottom: 10px;
+.showWeek {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.weeklyForecast {
+  display: table;
+  justify-content: space-around;
+  margin: auto;
+}
+
+li > h2 {
+    font-size: 18pt;
+    color: cadetblue;
+}
+
+.weekUl > li {
+  text-align: center;
+  border-top: 5px solid lightskyblue;
+  border-bottom: 5px solid lightskyblue;
+  border-left: 1px solid cadetblue;
+  border-right: 1px solid cadetblue;
+  width: 9rem;
+  height: 8.5rem;
+  color: darkcyan;
+  font-size: 12pt;
+  background-color: rgba(226, 243, 247, 0.603);
+  
+}
+
+li > * {
+  /* justify-content: center;
+  text-align: center; */
+  font-size: smaller;
+  color: darkslategrey;
+}
+
+.weekUl {
+  text-transform: capitalize;
+  margin: auto;
+  /* padding-top: -2rem; */
 }

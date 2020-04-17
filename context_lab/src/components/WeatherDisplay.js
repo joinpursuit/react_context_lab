@@ -22,38 +22,51 @@ const WeatherDisplay = ({ location }) => {
     }
   };
 
+  //   format="MMM D YYYY" withTitle>
+
   let week = forecast.map((day, i) => {
     let date = day.dt;
-    console.log(day.weather)
+    console.log(day.weather);
     return (
-      <ul key={i}>
+      <ul className="weekUl" key={i}>
         <li>
-          <Moment unix format="MMM D YYYY" withTitle>
-            {date}
-          </Moment>
-        </li>
-        <li>Temp: {Math.floor(farenheit(day.temp.day))}</li>
-        <li>
-          Sunrise: <Moment unix>{day.sunrise}</Moment>
+          <Moment unix>{date}</Moment>
         </li>
         <li>
-          Sunset: <Moment unix>{day.sunset}</Moment>
+          <h2>Temp:</h2>
+          {Math.floor(farenheit(day.temp.day))}
+        </li>
+        <li>
+          <h2>Sunrise:</h2>
+          <Moment unix>{day.sunrise}</Moment>
+        </li>
+        <li>
+          <h2>Sunset:</h2>
+          <Moment unix>{day.sunset}</Moment>
         </li>
 
-        <li>{day.weather.map(el => {
-            return el.description
-        })}</li>
-      
-        <li>UV Index:{day.uvi}</li>
-        
+        <li>
+          <h2>
+            {day.weather.map(el => {
+              return `${el.description}`;
+            })}
+          </h2>
+        </li>
+
+        <li>
+          <h2>UV Index:</h2>
+          {day.uvi}
+        </li>
       </ul>
     );
   });
   console.log(forecast);
 
   return (
-    <div>
-      <button onClick={getForecast}>Get 5 Day Forecast!</button>
+    <div className="displayDiv">
+      <button className="showWeek" onClick={getForecast}>
+        Get 5 Day Forecast!
+      </button>
       <div className="weeklyForecast">{week}</div>
     </div>
   );
