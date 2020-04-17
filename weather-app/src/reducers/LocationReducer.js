@@ -1,14 +1,12 @@
-const LocationReducer = (state = {
-    location: {}
-    }, action) => {
-        if(action.type === 'GET_LOCATION') {
-            state = {...state, location: action.payload}
-        }
-        return state;
-};
+const LocationReducer = (state = [], action) => {
+    switch (action.type) {
+        case SHOW_LOCATION: 
+            return [action.payload, ...state]
+        default:
+            return state;
+    }
+}
 
 export default LocationReducer;
 
 
-
-    

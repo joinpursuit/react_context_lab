@@ -1,10 +1,11 @@
-const WeatherReducer = (state = {
-    weather: {}
-    }, action) => {
-        if(action.type === 'GET_WEATHER') {
-            state = {...state, weather: action.payload}
-        }
-        return state;
-};
+const WeatherReducer = (state = [], action) => {
+    switch (action.type) {
+        case GET_WEATHER: 
+            return [action.payload, ...state]
+        default:
+            return state;
+    }
+}
 
 export default WeatherReducer
+
