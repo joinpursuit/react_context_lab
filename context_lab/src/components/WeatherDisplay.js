@@ -24,6 +24,7 @@ const WeatherDisplay = ({ location }) => {
 
   let week = forecast.map((day, i) => {
     let date = day.dt;
+    console.log(day.weather)
     return (
       <ul key={i}>
         <li>
@@ -35,15 +36,25 @@ const WeatherDisplay = ({ location }) => {
         <li>
           Sunrise: <Moment unix>{day.sunrise}</Moment>
         </li>
-        {/* <li></li> */}
+        <li>
+          Sunset: <Moment unix>{day.sunset}</Moment>
+        </li>
+
+        <li>{day.weather.map(el => {
+            return el.description
+        })}</li>
+      
+        <li>UV Index:{day.uvi}</li>
+        
       </ul>
     );
   });
+  console.log(forecast);
 
   return (
     <div>
       <button onClick={getForecast}>Get 5 Day Forecast!</button>
-      <div className="weeklyForecast" >{week}</div>
+      <div className="weeklyForecast">{week}</div>
     </div>
   );
 };
