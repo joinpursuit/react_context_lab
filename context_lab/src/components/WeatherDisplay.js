@@ -26,7 +26,7 @@ const WeatherDisplay = ({ location }) => {
 
   let week = forecast.map((day, i) => {
     let date = day.dt;
-    console.log(day.weather);
+    // console.log(day.weather);
     return (
       <ul className="weekUl" key={i}>
         <li>
@@ -34,7 +34,7 @@ const WeatherDisplay = ({ location }) => {
         </li>
         <li>
           <h2>Temp:</h2>
-          {Math.floor(farenheit(day.temp.day))}
+          {`${Math.floor(farenheit(day.temp.day))} `} &#x00B0;
         </li>
         <li>
           <h2>Sunrise:</h2>

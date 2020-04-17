@@ -64,12 +64,12 @@ const Weather = () => {
       <h2>Current Location: </h2>
       <p>Your Coordinates: {location} </p>
       <button onClick={getWeather}>Get Your Local Weather</button>
-      <p> Your Current Temperature: {temperature}</p>
+      <p> Your Current Temperature: {temperature}&#x00B0;</p>
       <div>
         <ul>
-          <li>Feels like: {feelsLike}</li>
-          <li>Today's low: {minTemp}</li>
-          <li>Today's high: {maxTemp}</li>
+          <li>Feels like: {feelsLike}&#x00B0;</li>
+          <li>Today's low: {minTemp}&#x00B0;</li>
+          <li>Today's high: {maxTemp}&#x00B0;</li>
           <li>Pressure: {pressure}</li>
           <li>Humidity: {humidity}</li>
         </ul>
