@@ -4,6 +4,10 @@ import apiKey from "../secret";
 import axios from "axios";
 import WeatherDisplay from "./WeatherDisplay";
 
+export const farenheit = temp => {
+  return (temp - 273.15) * 1.8 + 32;
+};
+
 const Weather = () => {
   const [location, setLocation] = useState([]);
   const [temperature, setTemperature] = useState([]);
@@ -36,9 +40,6 @@ const Weather = () => {
       // debugger;
       const stat = res.data.main;
       let temp = stat.temp;
-      const farenheit = temp => {
-        return (temp - 273.15) * 1.8 + 32;
-      };
       realTemp = Math.round(farenheit(temp));
       setTemperature(realTemp);
       setFeelsLike(Math.round(farenheit(stat.feels_like)));
@@ -66,7 +67,6 @@ const Weather = () => {
       <p> Your Current Temperature: {temperature}</p>
       <div>
         <ul>
-          {}
           <li>Feels like: {feelsLike}</li>
           <li>Today's low: {minTemp}</li>
           <li>Today's high: {maxTemp}</li>

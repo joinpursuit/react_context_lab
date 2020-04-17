@@ -1,0 +1,8 @@
+.weeklyForecast {
+  display: grid;
+}
+
+.weatherForecast > li {
+  border: 1px solid lightskyblue;
+  padding-bottom: 10px;
+}
