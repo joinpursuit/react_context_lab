@@ -31,7 +31,7 @@ const Weather = () => {
         <input type="text" value={input} onChange={e=>setInput(e.target.value)}/>
         <button>click</button>
       </form>
-      <ForecastDisplay forecast ={forecast} />
+      <ForecastDisplay />
     </div>
   )
 }
