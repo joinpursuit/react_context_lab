@@ -1,4 +1,10 @@
 .forecast {
   display: flex;
   justify-content: space-evenly;
+  color: var(--color-text);
+}
+.dayForecast {
+  background-color: var(--color-weatherDiv);
+  padding: 5px;
+  border-radius: 5px;
 }

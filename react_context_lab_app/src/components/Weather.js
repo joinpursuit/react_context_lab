@@ -6,10 +6,14 @@ import axios from "axios";
 import { fetchWeather } from "../actions/weatherActions";
 import { WeatherContext } from "../providers/WeatherProvider";
 import API_KEY from "../secrets";
+import { ThemeContext } from "../providers/ToggleProvider";
 
 const Weather = () => {
   const { weather, dispatch } = useContext(WeatherContext);
   const [location, setLocation] = useState({});
+
+  const { toggleTheme, theme } = useContext(ThemeContext);
+  console.log("theme: ", theme);
 
   const getWeatherByLatLong = async (lat, long) => {
     try {
@@ -51,7 +55,7 @@ const Weather = () => {
   }, []);
 
   return (
-    <div className="weather">
+    <div className={theme}>
       <button onClick={getAddress}>Use My Location</button>
       <WeatherForm />
       <h1>Weather</h1>

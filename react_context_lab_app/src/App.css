@@ -1,5 +1,44 @@
-.App {
+#App {
   text-align: center;
+  /* background-color: var(--color-background); */
+
+  /* --color-background: #fcfcfc;
+  --color-containers: #ededed;
+  --color-hover: #5f8894;
+  --color-navbarActive: #fb3f3f;
+  --color-text: #080808; */
+}
+
+.light {
+  text-align: center;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  --color-background: #fcfcfc;
+  --color-weatherDiv: grey;
+  --color-containers: #070707;
+  --color-hover: #5f8894;
+  --color-navbarActive: #fb3f3f;
+  --color-text: #080808;
+}
+
+.dark {
+  text-align: center;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  --color-background: #242424;
+  --color-weatherDiv: rgb(93, 90, 90);
+  --color-containers: #818181;
+  --color-hover: #5f8894;
+  --color-navbarActive: #fb3f3f;
+  --color-text: white;
+}
+
+.currentWeather {
+  background-color: var(--color-weatherDiv);
+  padding: 5px;
+  border-radius: 5px;
+  width: 25%;
+  margin: auto;
 }
 
 .App-logo {

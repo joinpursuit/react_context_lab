@@ -3,7 +3,7 @@ import { WeatherContext } from "../providers/WeatherProvider";
 
 const CurrentWeather = () => {
   const { weather } = useContext(WeatherContext);
-  debugger;
+
   return (
     <div className="currentWeather">
       {weather?.current?.data?.name ? (
