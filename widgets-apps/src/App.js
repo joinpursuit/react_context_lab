@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from './Components/Home';
-import Clock from './Components/Clock'
+import Time from './Components/Time'
 import NavBar from './Components/NavBar'
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
       <NavBar />
       <Switch>
         <Route exact path={'/'} component={Home}/>
-        <Route exact path={'/clock'} component={Clock}/>
+        <Route exact path={'/clock'} component={Time}/>
       </Switch>
     </div>
   );

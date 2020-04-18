@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-
 import Button from "./DarkMode/Button";
 import useDarkMode from "./DarkMode/useDarkMode";
 import { lightMode, darkMode } from "./DarkMode/homecss";
