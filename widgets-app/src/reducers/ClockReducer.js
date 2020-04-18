@@ -1,12 +1,12 @@
-// import { CLOCK } from '../actions/actionTypes';
+import { CLOCK } from '../actions/actionTypes';
 
-// const ClockReducer = (state = [], action) => {
-//   switch (action.type) {
-//     case CLOCK: 
-//       return [...state, action.payload]
+const ClockReducer = (state = [], action) => {
+  switch (action.type) {
+    case CLOCK: 
+      return [...state, action.payload]
     
-//       default:
-//         return state;
-//   }
-// }
-// export default ClockReducer;
+      default:
+        return state;
+  }
+}
+export default ClockReducer;
