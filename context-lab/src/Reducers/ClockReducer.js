@@ -1,11 +1,11 @@
 import {TIME} from '../Actions/ActionTypes'
-const ClockReducer = ()=>{
-    // let current = new Date()
-    // let newTime = current.getHours() + ':'+  current.getMinutes()
-
-
-
-
-}
+const ClockReducer = (state, action) => {
+    switch (action.type) {
+      case TIME:
+        return action.payload;
+      default:
+        return state;
+    }
+  };
 
 export default ClockReducer
