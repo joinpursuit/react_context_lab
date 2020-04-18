@@ -37,6 +37,11 @@ const Weather = () => {
   return (
     <div className="weatherDiv">
       <div className="headDiv">
+        <img
+          className="headImg"
+          alt=""
+          src="http://openweathermap.org/img/wn/01d@2x.png"
+        ></img>
         <p className="title">New York City</p>
 
         <p className="info">
@@ -44,11 +49,57 @@ const Weather = () => {
         </p>
       </div>
       <div className="dayDiv">
-        <h2>Today</h2>
+        <div id="container">
+          <img
+            alt=""
+            className="todayImg"
+            src="http://openweathermap.org/img/wn/03d@2x.png"
+          ></img>
+        </div>
+        <div id="container">
+          <h2>Today</h2>
+          <p className="time">Scattered Clouds</p>
+        </div>
+        <div id="container">
+          <h2>Sunrise</h2>
+          <p className="time">
+            <Moment format="HH:mm" unix>
+              {158600302}
+            </Moment>
+            <span className="timeSpan">AM</span>
+          </p>
+        </div>
+        <div id="container">
+          <h2>Sunset</h2>
+          <p className="time">
+            <Moment format="HH:mm" unix>
+              {158600302}
+            </Moment>
+            <span className="timeSpan">PM</span>
+          </p>
+        </div>
       </div>
-      {/* <Moment format="HH:mm" unix>
-        {158600302}
-      </Moment> */}
+
+      <div className="sevenDay">
+        <div className="sevDayContainer">
+          <img
+            alt=""
+            className="sevenDayImg"
+            src="http://openweathermap.org/img/wn/11d@2x.png"
+          ></img>
+        </div>
+        <div id="day" className="sevDayContainer">
+          <h3>Saturday</h3>
+          <p id="dayP">thunderstorm</p>
+        </div>
+        <div id="day" className="sevDayContainer">
+          <p id="degrees">
+            {" "}
+            <span>50°</span>
+          </p>
+        </div>
+      </div>
+      {/*  */}
     </div>
   );
 };
