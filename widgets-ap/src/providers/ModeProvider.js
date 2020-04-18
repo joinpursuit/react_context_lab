@@ -2,12 +2,14 @@ import React, { createContext, useState } from "react";
 export const ModeContext = createContext();
 
 const ModeProvider = (props) => {
-    debugger
-    const [toggle, setToggle] = useState(false);
+    const [toggle, setToggle] = useState(sessionStorage.getItem("DarkMode") === "true");
+    // const [toggle, setToggle] = useState(false);
 
     const switchMode = () => {
-        setToggle(!toggle)
+        sessionStorage.setItem("DarkMode", !toggle);
+        setToggle(previous => !previous);
     }
+
     return (
         <ModeContext.Provider value ={{switchMode, toggle}}>
             {props.children}

@@ -1,12 +1,13 @@
 import React, {useContext} from "react";
 import { ModeContext } from "../providers/ModeProvider";
+const light = {background: "white"};
+const dark = {background : "black"};
 
 const Toggle = () => {
-    debugger
-    const {switchMode} = useContext(ModeContext);
+    const {switchMode, toggle} = useContext(ModeContext);
 
     return (
-        <div>
+        <div style={ toggle ? dark : light }>
             <button onClick={switchMode}>Toggle Light & Dark Mode</button>
         </div>
     )

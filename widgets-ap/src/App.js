@@ -6,12 +6,14 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import Weather from "./components/Weather";
 import Clock from "./components/Clock";
-import WeatherProvider from "./providers/WeatherProvider"
+import WeatherProvider from "./providers/WeatherProvider";
 
+// const light = {background: "white"};
+// const dark = {background : "black"};
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
     <Navbar/>
       <Switch>
         <Route exact path={"/"} component={Home}/>
@@ -24,6 +26,7 @@ function App() {
       </Switch>
     </div>
   );
+  
 }
 
 export default App;
