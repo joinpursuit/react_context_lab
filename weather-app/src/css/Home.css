@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mainDiv {
+    padding-top: 90px;
+    /* background-image: url("https://yt3.ggpht.com/a/AGF-l78-KkLPpaQwhU8F4iRB7XsH71q2By0jyxV_mQ=s900-c-k-c0xffffffff-no-rj-mo"); */
+    /* background-image: url("https://www.haworthphysio.co.uk/wp-content/uploads/2018/03/hot-vs-cold-1000x675.jpg"); */
+    background-image: url("https://iso.500px.com/wp-content/uploads/2015/06/flour_cover.jpeg");
+    opacity: 0.95;
+    background-size: 1500px 1000px;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    text-align: center;
+    height: 700px;
+    background-position: sticky;
+    /* position: fixed; */
+    /* padding-bottom: -120px; */
+}
+
+.styleH1 {
+    color: grey;
+}
+
+.styleH2 {
+    color: darkgray;
+}
+
+a:link {
+    color: lightgrey;
+}
+
+
+a:visited {
+    color: lightseagreen;
+}
