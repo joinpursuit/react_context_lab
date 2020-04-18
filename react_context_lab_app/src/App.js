@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Weather from "./components/Weather";
 import Clock from "./components/Clock";
 import WeatherProvider from "./providers/WeatherProvider";
+import ClockProvider from "./providers/ClockProvider";
 
 function App() {
   return (
@@ -21,7 +22,9 @@ function App() {
           </WeatherProvider>
         </Route>
         <Route exact path={"/clock"}>
-          <Clock />
+          <ClockProvider>
+            <Clock />
+          </ClockProvider>
         </Route>
       </Switch>
     </div>

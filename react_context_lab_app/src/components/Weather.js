@@ -52,6 +52,7 @@ const Weather = () => {
 
   return (
     <div className="weather">
+      <button onClick={getAddress}>Use My Location</button>
       <WeatherForm />
       <h1>Weather</h1>
       <CurrentWeather />

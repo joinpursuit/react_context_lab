@@ -1,11 +1,14 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { WeatherContext } from "../providers/WeatherProvider";
+import "./ForecastWeather.css";
 
 const ForecastWeather = () => {
   const { weather } = useContext(WeatherContext);
 
   let forecast = weather.forecast.daily.map((el) => {
+    let estSeconds = el.dt;
     let d = new Date(0); // The 0 there is the key, which sets the date to the epoch
+    d.setUTCSeconds(estSeconds - 18000);
     return (
       <div className="dayForecast">
         <h3>Date: {d.toDateString()}</h3>
@@ -22,10 +25,10 @@ const ForecastWeather = () => {
   });
 
   return (
-    <div className="forecast">
+    <>
       <h1>7 Day Forecast</h1>
-      {forecast}
-    </div>
+      <div className="forecast">{forecast}</div>
+    </>
   );
 };
 

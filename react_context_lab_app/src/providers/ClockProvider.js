@@ -1,13 +1,15 @@
-import { } from "../actions/actionsTypes";
-const WeatherReducer = (state = [], action) => {
-  switch (action.type) {
-    case :
-      return [action.payload, ...state];
-    case :
-      return state.filter((todo) => todo.id !== action.payload);
-    default:
-      return state;
-  }
+import React, { createContext, useReducer } from "react";
+import ClockReducer from "../reducers/ClockReducer";
+export const ClockContext = createContext();
+
+const ClockProvider = (props) => {
+  const [time, dispatch] = useReducer(ClockReducer);
+
+  return (
+    <ClockContext.Provider value={{ time, dispatch }}>
+      {props.children}
+    </ClockContext.Provider>
+  );
 };
 
-export default WeatherReducer;
+export default ClockProvider;

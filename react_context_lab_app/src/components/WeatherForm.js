@@ -13,18 +13,17 @@ const WeatherForm = () => {
 
     try {
       let res_current = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?zip=${input}&appid=${API_KEY}`
+        `https://api.openweathermap.org/data/2.5/weather?zip=${input}&APPID=${API_KEY}`
       );
 
-      let res_forecast = await axios.get(
-        `https://api.openweathermap.org/data/2.5/forecast?zip=${input}&APPID=${API_KEY}`
-      );
+      // let res_forecast = await axios.get(
+      //   `https://api.openweathermap.org/data/2.5/onecall?zip=${input}&APPID=${API_KEY}`
+      // );
 
       await dispatch(
         fetchWeather({
-          location: res_forecast.data.city,
           current: res_current,
-          forecast: res_forecast.data.list,
+          // forecast: res_forecast.data,
         })
       );
     } catch (error) {
