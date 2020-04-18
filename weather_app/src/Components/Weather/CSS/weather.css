@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../../../fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MonsterratRegular";
+  src: url("../../../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+.weatherDiv {
+  margin: auto;
+  /* background-color: #d8eefe; */
+  /* height: 500px;
+  width: 575px; */
+
+  height: 500px;
+  width: 450px;
+
+  border-radius: 10px;
+  border-style: solid;
+
+  border-width: 25px;
+  border-color: #fafafa;
+
+  padding: 10px;
+  box-shadow: 5px 10px 8px #3da9fc;
+  overflow: scroll;
+  /* border-width: 2.4px;
+  border-color: #90b4ce; */
+}
+
+.headDiv {
+  height: 125px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-color: #90b4ce;
+  border-style: solid;
+  border-bottom-width: 2.5px;
+
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  text-align: center;
+}
+.title {
+  margin-top: 30px;
+  color: #094067;
+  font-family: "RobotoRegular";
+  font-weight: 700;
+}
+
+span {
+  color: #ef4565;
+  font-weight: 800;
+}
+
+.info {
+  font-family: "MonsterratRegular";
+  font-size: larger;
+  margin-top: 10px;
+}
+
+.dayDiv {
+}

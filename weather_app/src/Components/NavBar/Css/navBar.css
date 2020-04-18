@@ -48,7 +48,7 @@
   border-style: solid;
   /* border-width: 2.5px; */
   margin-left: 70px;
-  width: 150px;
+  width: 125px;
 }
 
 .container {
@@ -80,7 +80,7 @@
   /* background-image: url("../../../images/sun.svg"); */
   /* background-color: azure; */
   background-repeat: no-repeat;
-  height: 100px;
+  height: 90px;
 }
 
 .link:active {
