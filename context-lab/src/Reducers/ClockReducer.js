@@ -1,13 +1,9 @@
 import {TIME} from '../Actions/ActionTypes'
-const ClockReducer = (state=[], action)=>{
-switch (action.type) {
-    case TIME:
-        return state + new Date().toLocaleString()
-        
+const ClockReducer = ()=>{
+    let current = new Date()
+    let newTime = current.getHours() + ':'+  current.getMinutes()
+    
 
-    default:
-        return state;
-}
 
 
 }
