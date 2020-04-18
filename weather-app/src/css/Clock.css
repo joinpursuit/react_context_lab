@@ -4,7 +4,30 @@
 }
 
 
-.mainDivYeah { 
+.normal .mainDivYeah { 
+    /* background-color: lightgray; */
     background-image: url("https://www.westelm.com/weimgs/rk/images/wcm/products/202014/0845/img28o.jpg");
     height: 120vh;
+    font: 18px;
  }
+
+
+.harryPotter .mainDivYeah {
+    background-image: url('https://wallpapertag.com/wallpaper/full/2/8/1/229516-harry-potter-backgrounds-1920x1080-photo.jpg');
+    height: 100vh;
+   
+}
+
+.normal .clockWidget {
+    color: darkslategray;
+    padding-top: 200px;
+    padding-left: 250px;
+    
+
+}
+
+.harryPotter .clockWidget {
+    color: whitesmoke;
+    padding-top: 200px;
+    padding-left: 250px;
+}

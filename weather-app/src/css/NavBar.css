@@ -35,3 +35,48 @@
     /* display: inline; */
 }
 
+.styleNavButton {
+    color: red;
+    font: 200px;
+
+}
+
+
+.Navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+.dropdown .styleNavButton {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+
+  .dropDownThemes {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropDownThemes {
+    display: block;
+  }
+

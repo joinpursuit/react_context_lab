@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useState, createContext } from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import Home from '../src/components/HomeComponent'
 import Weather from '../src/components/WeatherComponent'
 import Clock from '../src/components/ClockComponent'
-import WeatherByCountry from '../src/components/WeatherByCountry'
+// import WeatherByCountry from '../src/components/WeatherByCountry'
+import ThemeProvider from '../src/providers/ThemeProvider'
 import Error from '../src/components/Error'
 import NavBar from '../src/components/NavBar'
 import './App.css';
 
+
 const App = () => {
+  
+
+
   return (
     <div className="mainApp">
-
+    <ThemeProvider> 
     <BrowserRouter> 
+
       <NavBar/>
 
       <Switch>
@@ -31,9 +37,9 @@ const App = () => {
           <Clock/>
         </Route>
 
-        <Route exact path={"/weather/:country"}>
+        {/* <Route exact path={"/weather/:country"}>
           <WeatherByCountry/>
-        </Route>
+        </Route> */}
 
         <Route exact path={"*"}>
           <Error />
@@ -46,6 +52,7 @@ const App = () => {
     
     
     </BrowserRouter>
+    </ThemeProvider>
 
 
 
