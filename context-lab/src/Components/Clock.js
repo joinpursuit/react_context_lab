@@ -1,6 +1,7 @@
 import React from 'react'
-
+import {ThemeContext} from '../Providers/ThemeProvider'
     const Clock = props => {
+        const {theme} = useContext(ThemeContext)
         const [date, setDate] = React.useState(new Date());
        React.useEffect(() => {
         var timerID = setInterval( () => tick(), 1000 );
