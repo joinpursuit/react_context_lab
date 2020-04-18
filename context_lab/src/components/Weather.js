@@ -10,7 +10,6 @@ export const farenheit = temp => {
 
 const Weather = () => {
   const [location, setLocation] = useState([]);
-  const [yourLocation, setYourLocation] = useState([]);
   const [temperature, setTemperature] = useState([]);
   const [weather, setWeather] = useState([]);
   const [feelsLike, setFeelsLike] = useState("");
@@ -18,17 +17,19 @@ const Weather = () => {
   const [dew, setDew] = useState("");
   const [pressure, setPressure] = useState("");
   const [humidity, setHumidity] = useState("");
-  // const [currentStats, setCurrentStats] = useState([]);
 
   const getAddress = async () => {
     await navigator.geolocation;
     navigator.geolocation.getCurrentPosition(position => {
       let lat = position.coords.latitude;
-      let long = position.coords.longitude;
-      setLocation([lat, long]);
+      let lon = position.coords.longitude;
+      setLocation([lat, lon]);
     });
   };
-  console.log(location);
+
+  useEffect(() => {
+    getAddress();
+  }, []);
 
   let lat = location[0];
   let lon = location[1];
@@ -36,12 +37,8 @@ const Weather = () => {
   const getWeather = async () => {
     try {
       let realTemp = 0;
-      //   `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`
-      // );
       let res = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}
       `);
-      // debugger;
-      setYourLocation(res.data.timezone);
       const stat = res.data.current;
       let temp = stat.temp;
       realTemp = (Math.round(farenheit(temp)));
@@ -52,7 +49,6 @@ const Weather = () => {
       setDew(Math.round(farenheit(stat.dew_point)));
       setPressure(stat.pressure);
       setHumidity(stat.humidity);
-      // console.log(feelsLike, minTemp, maxTemp, pressure, humidity)
     } catch (error) {
       console.log(error);
       document.title = "ERROR";
@@ -60,16 +56,16 @@ const Weather = () => {
   };
 
   useEffect(() => {
-    getAddress();
-  }, []);
+    getWeather();
+  }, [location]);
+
 
   return (
     <div>
       <h1 id="heading">Weather</h1>
-      {/* <h2> {yourLocation} </h2> */}
       <div>
-        <h2> {`${temperature}`}&#x00B0;</h2>
-        <h2>{weather}</h2>
+        <h2 className="titles"> {`${temperature}`}&#x00B0;</h2>
+        <h2 className="titles">{weather}</h2>
         <ul className="today">
           <li><p>Feels Like</p>{feelsLike}&#x00B0;</li>
           <li><p>UVI</p>{uvi}</li>
@@ -77,7 +73,7 @@ const Weather = () => {
           <li><p>Pressure</p>{pressure}</li>
           <li><p>Humidity</p>{humidity}</li>
         </ul>
-      <button onClick={getWeather}>Get Your Local Weather</button>
+      {/* <button onClick={getWeather}>Get Your Local Weather</button> */}
       </div>
       <WeatherDisplay location={location} />
     </div>

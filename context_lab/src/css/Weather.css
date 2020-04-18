@@ -11,26 +11,18 @@
 }
 
 #heading {
-  font-size: 36pt;
-  color: black;
-  text-shadow: 2px 3px 4px rgb(125, 205, 231);
+  font-size: 44pt;
+  color:rgb(54, 160, 196);
+  text-shadow: 4px 4px 4px rgb(170, 170, 170);
 }
 
-h3 {
-  color: darkslategrey;
+.titles {
   font-size: 28pt;
-  text-shadow: 3px 3px 3px  rgb(160, 160, 160);
+  color: rgb(16, 34, 77, .75);
+  text-transform: capitalize;
+  text-shadow: 4px 4px 4px rgb(170, 170, 170);
 }
-
-h2 {
-  text-shadow: 3px 2px 2px rgb(221, 243, 248);
-}
-
-h1 {
-  color: rgb(54, 160, 196);
-  font-size: 28pt;
-  text-shadow: 3px 3px 2px rgb(125, 205, 231);
-}
+/*  ;*/
 
 .today {
   margin: auto;
@@ -46,12 +38,12 @@ h1 {
   font-weight: bold;
   flex-flow: wrap;
   width: 100px;
-  font-size: small;
+  font-size: 12pt;
   text-align: center;
   justify-items: center;
   padding: 5px 10px 15px 10px;
   height: 5.5em;
-  color: rgb(0, 87, 87);
+  color: rgb(16, 34, 77, .75);
   border: 2px lightgoldenrodyellow;
   border-radius: 25px 0px 25px 0px;
   /* background-color: rgba(80, 144, 239, 0.555); */
@@ -63,6 +55,7 @@ h1 {
     rgba(139, 183, 247, 1) 10%,
     rgba(255, 255, 255, 1) 100%
   );
+  text-shadow: 3px 3px 3px whitesmoke;
 }
 
 li {
