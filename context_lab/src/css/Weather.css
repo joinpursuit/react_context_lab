@@ -19,18 +19,17 @@
 h3 {
   color: darkslategrey;
   font-size: 28pt;
-  text-shadow: 2px 2px 2px 2px rgb(160, 160, 160);
+  text-shadow: 3px 3px 3px  rgb(160, 160, 160);
 }
 
 h2 {
-  color: darkcyan;
-  text-shadow: 1px 1px 2px rgb(125, 205, 231);
+  text-shadow: 3px 2px 2px rgb(221, 243, 248);
 }
 
 h1 {
-  color: cadetblue;
+  color: rgb(54, 160, 196);
   font-size: 28pt;
-  text-shadow: 1px 1px 2px rgb(125, 205, 231);
+  text-shadow: 3px 3px 2px rgb(125, 205, 231);
 }
 
 .today {
@@ -42,27 +41,37 @@ h1 {
 }
 
 .today > li {
-    margin: 50px 5px 50px 5px;
-    justify-content: space-around;
-    font-weight: bold;
-    flex-flow: wrap;
-    width: 100px;
-    font-size: small;
-    text-align: center;
-    justify-items: center;
-    padding: 5px 10px 15px 10px;
-    height: 5.5em;
-    color: rgb(0, 87, 87);
-    border: 2px lightgoldenrodyellow;
-    border-radius: 25px 0px 25px 0px;
-    background-color: rgba(80, 144, 239, 0.555);
-    box-shadow: 7px 5px 3px 1px rgba(255, 217, 0, 0.787);
-    border-style: outset;
+  margin: 50px 15px 50px 15px;
+  justify-content: space-around;
+  font-weight: bold;
+  flex-flow: wrap;
+  width: 100px;
+  font-size: small;
+  text-align: center;
+  justify-items: center;
+  padding: 5px 10px 15px 10px;
+  height: 5.5em;
+  color: rgb(0, 87, 87);
+  border: 2px lightgoldenrodyellow;
+  border-radius: 25px 0px 25px 0px;
+  /* background-color: rgba(80, 144, 239, 0.555); */
+  box-shadow: 7px 5px 3px 1px rgba(255, 217, 0, 0.787);
+  border-style: outset;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(139, 183, 247, 1) 10%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+li {
+  text-shadow: 3px 2px 2px rgb(221, 243, 248);
 }
 
 li > p {
-    text-align: center;
-    text-shadow: 1px 2px 3px rgb(125, 205, 231);
-    color: darkcyan;
-    font-size: 12pt;
+  text-align: center;
+  text-shadow: 3px 2px 2px rgb(221, 243, 248);
+  color: rgb(54, 160, 196);
+  font-size: 12pt;
 }

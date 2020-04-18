@@ -44,7 +44,7 @@ const Weather = () => {
       setYourLocation(res.data.timezone);
       const stat = res.data.current;
       let temp = stat.temp;
-      realTemp = Math.round(farenheit(temp));
+      realTemp = (Math.round(farenheit(temp)));
       setTemperature(realTemp);
       setWeather(res.data.current.weather[0].description);
       setFeelsLike(Math.round(farenheit(stat.feels_like)));
@@ -66,8 +66,7 @@ const Weather = () => {
   return (
     <div>
       <h1 id="heading">Weather</h1>
-      <h2> {yourLocation} </h2>
-      <button onClick={getWeather}>Get Your Local Weather</button>
+      {/* <h2> {yourLocation} </h2> */}
       <div>
         <h2> {`${temperature}`}&#x00B0;</h2>
         <h2>{weather}</h2>
@@ -78,6 +77,7 @@ const Weather = () => {
           <li><p>Pressure</p>{pressure}</li>
           <li><p>Humidity</p>{humidity}</li>
         </ul>
+      <button onClick={getWeather}>Get Your Local Weather</button>
       </div>
       <WeatherDisplay location={location} />
     </div>

@@ -39,12 +39,12 @@ const WeatherDisplay = ({ location }) => {
         </li>
         <li>
           <h2>Temp:</h2>
-          {`${Math.floor(farenheit(day.temp.day))} `} &#x00B0;
+          <h2 id="description">{`${Math.floor(farenheit(day.temp.day))} `} &#x00B0;</h2>
         </li>
 
         <li>
           <h2>UV Index:</h2>
-          {day.uvi}
+          <h2 id="description">{day.uvi}</h2>
         </li>
       </ul>
     );

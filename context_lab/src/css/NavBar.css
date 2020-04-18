@@ -6,10 +6,24 @@
   margin: auto;
   align-items: center;
   /* background-color: rgb(80, 144, 239); */
-  background-color: #9dc1f7;
+  /* background-color: #9dc1f7; */
+  background: rgb(250, 250, 210);
+  background: linear-gradient(
+    180deg,
+    rgba(250, 250, 210, 1) 0%,
+    rgba(211, 232, 255, 1) 100%
+  );
   height: 100px;
-  box-shadow: 10px 7px 7px 0px gold;
+  box-shadow: 2px 2px 2px 0px gold;
   text-shadow: 1px 1px 2px rgb(125, 205, 231);
+  border-bottom: 2.5px ridge lightcyan;
+  border-radius: 0px 0px 15px 15px;
+}
+
+#sun {
+  margin-right: -110px;
+  width: 205px;
+  height: 205px;
 }
 
 .link {
@@ -17,7 +31,7 @@
   font-weight: bold;
   font-size: 20pt;
   text-shadow: 1px 2px 3px rgb(160, 160, 160);
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .link:visited {
@@ -50,7 +64,9 @@ li {
 }
 
 #navTitle {
-  font-size: larger;
-  color: darkcyan;
+  margin-left: -20px;
+  font-size: x-large;
+  color: rgb(54, 160, 196);
   font-weight: bolder;
+  text-shadow: 4px 3px 3px rgb(125, 205, 231);
 }
