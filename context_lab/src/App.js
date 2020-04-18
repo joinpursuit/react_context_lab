@@ -13,8 +13,9 @@ function App() {
 
   return (
     <div className="App">
-    <NavBar/>
-    <Switch>
+    <ThemeProvider>
+      <NavBar/>
+      <Switch>
       <Route exact path={"/"}>
       <Home/>
       </Route>
@@ -24,7 +25,9 @@ function App() {
       <Route exact path={"/clock"}>
       <Clock/>
       </Route>
-    </Switch>
+      </Switch>
+    </ThemeProvider>
+    
     </div>
   );
 }

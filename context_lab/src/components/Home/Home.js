@@ -1,11 +1,15 @@
-import React from "react"
+import React, { useContext } from "react"
+import { ThemeContext } from "../../providers/ThemeProvider"
 
 const Home = () => {
+
+    const { theme } = useContext(ThemeContext)
     return (
-        <div className="dark">
-            <p className="welcome">
-                Welcome to my Widgets app! Do some widget stuff, I guess.
-            </p>
+        <div className={`${theme}`}>
+            <div className="welcome">
+                <h2>Welcome to my Widgets app!</h2>
+                <h3>Do some widget stuff, I guess.</h3>
+            </div>
         </div>
     )
 }
