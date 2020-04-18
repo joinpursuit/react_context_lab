@@ -18,6 +18,15 @@
    
 }
 
+.criminalMinds .mainDivYeah {
+    background-image: url('https://www.redringtones.com/wp-content/uploads/2017/02/criminal-minds.jpg');
+    height: 100vh;
+}
+
+.prettyInPink .mainDivYeah {
+    background-color: palevioletred;
+}
+
 .normal .clockWidget {
     color: darkslategray;
     padding-top: 200px;
