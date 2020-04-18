@@ -72,11 +72,11 @@ const Weather = () => {
         <h2> {`${temperature}`}&#x00B0;</h2>
         <h2>{weather}</h2>
         <ul className="today">
-          <li><p>Feels Like:</p>{feelsLike}&#x00B0;</li>
-          <li><p>UVI:</p>{uvi}</li>
-          <li><p>Dew:</p>{dew}&#x00B0;</li>
-          <li><p>Pressure:</p>{pressure}</li>
-          <li><p>Humidity:</p>{humidity}</li>
+          <li><p>Feels Like</p>{feelsLike}&#x00B0;</li>
+          <li><p>UVI</p>{uvi}</li>
+          <li><p>Dew</p>{dew}&#x00B0;</li>
+          <li><p>Pressure</p>{pressure}</li>
+          <li><p>Humidity</p>{humidity}</li>
         </ul>
       </div>
       <WeatherDisplay location={location} />

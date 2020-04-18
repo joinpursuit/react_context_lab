@@ -5,15 +5,19 @@
   position: sticky;
   margin: auto;
   align-items: center;
-  background-color: rgb(80, 144, 239);
-  /* background-color: rgb(53, 107, 188); */
+  /* background-color: rgb(80, 144, 239); */
+  background-color: #9dc1f7;
   height: 100px;
   box-shadow: 10px 7px 7px 0px gold;
+  text-shadow: 1px 1px 2px rgb(125, 205, 231);
 }
 
 .link {
   text-decoration: none;
   font-weight: bold;
+  font-size: 20pt;
+  text-shadow: 1px 2px 3px rgb(160, 160, 160);
+  letter-spacing: .5px;
 }
 
 .link:visited {
@@ -27,6 +31,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
+  text-shadow: 1px 2px 3px rgb(125, 205, 231);
 }
 
 li {
@@ -34,6 +39,7 @@ li {
   padding-left: 25px;
   padding-right: 25px;
   text-decoration: none;
+  text-shadow: 1px 2px 3px rgb(125, 205, 231);
 }
 
 .link:active,
@@ -45,6 +51,6 @@ li {
 
 #navTitle {
   font-size: larger;
-  color: gold;
+  color: darkcyan;
   font-weight: bolder;
 }
