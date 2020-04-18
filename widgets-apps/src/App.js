@@ -1,26 +1,20 @@
 import React from "react";
-import { ThemeProvider } from "styled-components";
-import { lightMode, darkMode } from "./Components/DarkMode/homecss";
 import { Route, Switch } from "react-router-dom";
-import { GlobalStyle } from "./Components/DarkMode/GlobalStyle";
-import useDarkMode from "./Components/DarkMode/useDarkMode";
-import Button from "./Components/DarkMode/Button";
-import Home from "./Components/Home";
 import "./App.css";
+import Home from './Components/Home';
+import Clock from './Components/Clock'
+import NavBar from './Components/NavBar'
 
 const App = () => {
-  const [theme, toggleTheme] = useDarkMode();
-
-  const themeMode = theme === "light" ? lightMode : darkMode;
 
   return (
-    <ThemeProvider theme={themeMode}>
-      <GlobalStyle />
-      <Button theme={theme} toggleTheme={toggleTheme} />
+    <div>
+      <NavBar />
       <Switch>
-        <Route exact path={'/'} component={Home} />
+        <Route exact path={'/'} component={Home}/>
+        <Route exact path={'/clock'} component={Clock}/>
       </Switch>
-    </ThemeProvider>
+    </div>
   );
 };
 
