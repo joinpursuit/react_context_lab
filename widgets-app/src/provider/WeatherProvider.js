@@ -3,9 +3,12 @@ import WeatherReducer from "../reducers/WeatherReducer"
 export const WeatherContext = createContext();
 
 const WeatherProvider = (props) => {
-  const [location, dispatch] = useReducer(WeatherReducer, ["Miami"]);
+  const [forecast, dispatch] = useReducer(WeatherReducer);
  
-  return (<WeatherContext.Provider return value={{ location, dispatch }}>{props.children}</WeatherContext.Provider>)
+  return (
+    <WeatherContext.Provider value={{ forecast, dispatch }}>
+      {props.children}
+    </WeatherContext.Provider>)
   
 }
 

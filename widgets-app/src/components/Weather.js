@@ -1,22 +1,37 @@
 import React,{ useContext, useState} from "react";
 import { WeatherContext } from "../provider/WeatherProvider";
 import { weather } from "../actions/weatherActions";
+import axios from 'axios';
+import API_KEY from "../api";
+import ForecastDisplay from "./ForecastDisplay";
+
 const Weather = () => {
   const [input, setInput] = useState("")
-  const { dispatch, location } = useContext(WeatherContext);
+  const { dispatch } = useContext(WeatherContext);
 
-  const click = (e) => {
+  const fetchWeather = async (e) => {
     e.preventDefault();
-    dispatch(weather(input));
-    setInput("")
+    try {
+      let res = await axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${input}&appid=${API_KEY}`)
+      debugger
+      dispatch(weather(res.data.list[0]));
+      setInput("")
+    } catch (err) {
+      console.log(err);
+      
+    }
   }
-  console.log("this is the weather state", location);
+  // res.data.list[0].main.temp
+  // res.data.list[0].weather[0].description
+
+ 
   return (
     <div className="Weather">
-      <form onSubmit={click}>
+      <form onSubmit={fetchWeather}>
         <input type="text" value={input} onChange={e=>setInput(e.target.value)}/>
         <button>click</button>
       </form>
+      <ForecastDisplay forecast ={forecast} />
     </div>
   )
 }
