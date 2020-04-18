@@ -1,13 +1,14 @@
-import React, { useState, useEffect, useContext, useDispatch } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import WeatherForm from "./WeatherForm";
-import WeatherDisplay from "./WeatherDisplay";
+import CurrentWeather from "./CurrentWeather";
+import ForecastWeather from "./ForecastWeather";
 import axios from "axios";
 import { fetchWeather } from "../actions/weatherActions";
 import { WeatherContext } from "../providers/WeatherProvider";
 import API_KEY from "../secrets";
 
 const Weather = () => {
-  const { dispatch } = useContext(WeatherContext);
+  const { weather, dispatch } = useContext(WeatherContext);
   const [location, setLocation] = useState({});
 
   const getWeatherByLatLong = async (lat, long) => {
@@ -16,16 +17,14 @@ const Weather = () => {
         `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}`
       );
       let res_forecast = await axios.get(
-        `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${API_KEY}`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${API_KEY}`
       );
       await dispatch(
         fetchWeather({
-          location: res_forecast.data.city,
           current: res_current,
-          forecast: res_forecast.data.list,
+          forecast: res_forecast.data,
         })
       );
-      debugger;
     } catch (error) {
       console.log(error);
       //   dispatch(displayErrors(error.message));
@@ -55,7 +54,8 @@ const Weather = () => {
     <div className="weather">
       <WeatherForm />
       <h1>Weather</h1>
-      <WeatherDisplay />
+      <CurrentWeather />
+      {weather?.forecast ? <ForecastWeather /> : null}
     </div>
   );
 };
