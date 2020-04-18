@@ -3,7 +3,7 @@ const Clock =()=>{
     return (
         <div className="ClockComponent">
 
-            Clock
+           It is 12:00  O' Clock
         </div>
     )
 }

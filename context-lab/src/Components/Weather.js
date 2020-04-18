@@ -3,7 +3,7 @@ const Weather =()=>{
     return (
         <div className="WeatherComponent">
 
-            Weather
+            it is 55 degrees with sunny weather
         </div>
     )
 }
