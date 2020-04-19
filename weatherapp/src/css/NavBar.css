@@ -1,0 +1,23 @@
+nav {
+    display: flex;
+    background-color: rgb(0, 150, 250);
+    justify-content: space-evenly;
+}
+img{
+    height: 100px;
+}
+
+.links{
+    /* border: 1px solid white; */
+    width: 35%;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+.active {
+    color: white;
+    background-color: rgb(9, 160, 247);
+  }
+
