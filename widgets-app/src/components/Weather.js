@@ -1,11 +1,13 @@
 import React,{ useContext, useState} from "react";
 import { WeatherContext } from "../provider/WeatherProvider";
 import { weather } from "../actions/weatherActions";
+import { ThemeContext } from '../provider/ThemeProvider';
 import axios from 'axios';
 import API_KEY from "../api";
 import ForecastDisplay from "./ForecastDisplay";
 
 const Weather = () => {
+  const { theme } = useContext(ThemeContext);
   const [input, setInput] = useState("")
   const { dispatch } = useContext(WeatherContext);
 
@@ -26,7 +28,8 @@ const Weather = () => {
 
  
   return (
-    <div className="Weather">
+    <div className={theme}>
+
       <form onSubmit={fetchWeather}>
         <input type="text" value={input} onChange={e=>setInput(e.target.value)}/>
         <button>click</button>

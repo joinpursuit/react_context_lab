@@ -3,18 +3,21 @@ import NavBar from "./components/NavBar";
 
 import WeatherProvider from "./provider/WeatherProvider";
 // import ClockProvider from "./provider/ClockProvider";
+import ThemeProvider from './provider/ThemeProvider';
+ 
 
 import Home from "./components/Home";
 import Weather from "./components/Weather";
-// import Clock from "./components/Clock";
+import Clock from "./components/Clock";
 
 import { Route, Switch } from "react-router-dom";
 import './App.css';
-// export const Context = createContext();
+export const Context = createContext();
 
 function App() {
   return (
     <div className="App">
+    <ThemeProvider>
       <NavBar />
 
         <Switch>
@@ -29,7 +32,7 @@ function App() {
       </ClockProvider> */}
         
         </Switch>
-  
+        </ThemeProvider>
     </div>
   );
 }

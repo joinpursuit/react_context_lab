@@ -3,6 +3,7 @@ import { WeatherContext } from "../provider/WeatherProvider"
 
 const ForecastDisplay = () => {
   const { forecast } = useContext(WeatherContext);
+ 
   let currTemp = forecast.main.temp
   let currDesc = forecast.weather[0].description
   return (
