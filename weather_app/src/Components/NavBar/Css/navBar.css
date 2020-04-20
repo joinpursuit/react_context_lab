@@ -31,15 +31,15 @@
 .link {
   text-decoration: none;
   /* text-shadow: white; */
-  color: #2490b8;
+  /* color: #2490b8; */
   font-weight: 500;
   margin-bottom: 50px;
   margin-top: 50px;
   /* padding: 10px;
   box-shadow: 5px 10px 8px #b8c1ec; */
 }
-.link:hover {
-  transform: scale(1.1);
+#weather:hover {
+  transform: scale(1.3);
 }
 
 #weather {
