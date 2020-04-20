@@ -7,22 +7,13 @@ import SevenDaysWeather from "../SevenDaysWeather/SevenDaysWeather";
 const WeatherBody = ({ weather }) => {
   return (
     <div className="weatherDiv">
-      {/* HEAD WITH CURRENT TEMP BEGIN  */}
-      <WeatherHead />
-
-      {/* HEAD WITH CURRENT TEMP END  */}
+      <WeatherHead weather={weather} />
 
       <div className="divToScroll">
-        {/* CURRENT DAY INFO AND FORCAST BEGIN */}
-        <WeatherDay />
+        <WeatherDay weather={weather} />
 
-        {/* CURRENT DAY INFO AND FORCAST END */}
-
-        {/* SEVEN DAY FORCAST AND TEMP BEGIN */}
-        <SevenDaysWeather />
-        {/* SEVEN DAY FORCAST AND TEMP END */}
+        <SevenDaysWeather weather={weather} />
       </div>
-      {/* END OF DIV TO SCROLL  */}
     </div>
   );
 };

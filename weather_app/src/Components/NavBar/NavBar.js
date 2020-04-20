@@ -9,15 +9,25 @@ const NavBar = () => {
     <div className="navBody">
       <div className="NavBar">
         <div className="container">
-          <NavLink className="link" exact to="/">
-            <img id="weather" alt="" src={homeImg}></img>
-          </NavLink>
-          <NavLink className="link" exact to="/weather">
-            <img id="weather" alt="" src={weatherImg}></img>
-          </NavLink>
-          <NavLink className="link" exact to="/clock">
-            <img id="weather" alt="" src={clockImg}></img>
-          </NavLink>
+          <div className="holder">
+            <NavLink className="link" exact to="/">
+              <img id="weather" alt="" src={homeImg}></img>
+            </NavLink>
+          </div>
+
+          <div className="holder">
+            <NavLink className="link" exact to="/weather">
+              <img id="weather" alt="" src={weatherImg}></img>
+            </NavLink>
+          </div>
+
+          <div className="holder">
+            <NavLink className="link" exact to="/clock">
+              <img id="weather" alt="" src={clockImg}></img>
+            </NavLink>
+          </div>
+
+          <div className="holder">info</div>
         </div>
       </div>
     </div>

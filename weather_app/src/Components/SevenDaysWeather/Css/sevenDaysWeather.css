@@ -18,10 +18,11 @@
 
 .sevenDayImg {
   height: 65px;
+  margin-right: 20px;
 }
 
 #day {
-  margin-left: 20px;
+  width: 125px;
 }
 
 #dayP {
@@ -29,7 +30,7 @@
   margin-top: 5px;
 }
 #degrees {
-  margin-left: 140px;
+  margin-left: 130px;
   margin-top: 5px;
   font-size: larger;
 }
