@@ -3,7 +3,8 @@ import "./Css/sevenDaysWeather.css";
 import Moment from "react-moment";
 
 const SevenDaysWeather = ({ weather }) => {
-  return weather.daily.map((day, i) => {
+  let daily = weather.daily;
+  return daily.map((day, i) => {
     return (
       <div key={i} className="sevenDay">
         <div className="sevDayContainer">

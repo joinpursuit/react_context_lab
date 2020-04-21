@@ -34,6 +34,7 @@ const Weather = () => {
 
   useEffect(() => {
     loadPage();
+    // eslint-disable-next-line
   }, []);
 
   return <>{isLoading ? <Loading /> : <WeatherBody weather={weather} />}</>;
