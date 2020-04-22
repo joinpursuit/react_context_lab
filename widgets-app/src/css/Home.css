@@ -1,0 +1,16 @@
+.light {
+  background: white;
+  color: rgba(5, 29, 125, 0.954);
+}
+
+.black {
+  background: (5, 29, 125, 0.954);;
+  color: white;
+}
+
+.light .homeHeader {
+  color: rgb(92, 90, 91);
+}
+.dark .homeHeader {
+  color:rgb(18, 190, 193);
+}

@@ -1,0 +1,14 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.light {
+  background: white;
+  color:rgba(5, 29, 125, 0.954);
+}
+
+.dark {
+  background:rgba(5, 29, 125, 0.954);
+  color: white;
+}
