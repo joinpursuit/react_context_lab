@@ -46,3 +46,22 @@ h3 {
   font-family: "RobotoRegular";
   font-weight: bold;
 }
+
+@media (max-width: 600px) {
+  .weatherDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 72vw;
+    margin-left: -55vw;
+    margin-top: 30vh;
+  }
+
+  #degrees {
+    margin-left: unset;
+  }
+
+  .todayImg {
+    margin-left: unset;
+  }
+}
