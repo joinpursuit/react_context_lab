@@ -5,7 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/HomePage/Home";
 import Weather from "./Components/Weather/Weather";
-import Clock from "./Components/Clock/Clock";
+import Clockk from "./Components/Clock/Clock";
 import { ThemeContext } from "./Providers/ThemeProviders";
 
 const App = () => {
@@ -29,7 +29,7 @@ const App = () => {
           <Weather />
         </Route>
         <Route exact path="/clock">
-          <Clock />
+          <Clockk />
         </Route>
       </Switch>
     </div>

@@ -1,25 +1,33 @@
 import React from "react";
 import "./Css/clock.css";
-
-const Clock = () => {
+import Clock from "react-live-clock";
+const Clockk = () => {
   return (
     <div className="clockApp">
       <div className="clockContainer">
         <div className="clockTime">
-          <div className="clockDays">
-            <p className="clockP">MON</p>
-            <p className="clockP">TUE</p>
-            <p className="clockP">WED</p>
-            <p className="clockP">THU</p>
-            <p className="clockP">FRI</p>
-            <p className="clockP">SAT</p>
-            <p className="clockP">SUN</p>
-          </div>
-          <div>
-            <p className="clockTimeP">
-              08:30:20
-              <span className="clockSpan">PM</span>
-            </p>
+          <div className="clockWrap">
+            <div className="towrap" id="clockDays">
+              <p id="clockP">MON</p>
+              <p id="clockP">TUE</p>
+              <p id="clockP">WED</p>
+              <p id="clockP">THU</p>
+              <p id="clockP">FRI</p>
+              <p id="clockP">SAT</p>
+              <p id="clockP">SUN</p>
+            </div>
+            <div className="towrap">
+              <p id="clockTimeP">
+                <Clock
+                  format={"hh:mm:ss"}
+                  ticking={true}
+                  timezone={"US/Eastern"}
+                />
+                <span className="clockSpan">
+                  <Clock format={"A"} ticking={true} timezone={"US/Eastern"} />
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -27,4 +35,4 @@ const Clock = () => {
   );
 };
 
-export default Clock;
+export default Clockk;
