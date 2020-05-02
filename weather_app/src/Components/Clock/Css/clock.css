@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Digi";
+  src: url("../../../fonts/DigitalNumbers-Regular.ttf") format("truetype");
+}
+
+.clockApp {
+  background-color: #d8eefe;
+  height: 100vh;
+  width: 85vw;
+  margin-left: 5.2vw;
+  text-align: center;
+}
+.clockContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30vh;
+  height: 30vh;
+  background-color: white;
+  width: 40vw;
+  margin-left: 17vw;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px 6px #90b4ce;
+  padding: 2px;
+}
+
+.clockTime {
+  background-color: whitesmoke;
+  height: 20vh;
+  width: 35vw;
+  margin-top: 5vh;
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px #90b4ce;
+}
+
+.clockDays {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.clockP {
+  font-size: 2.2vh;
+  margin-top: 3vh;
+  color: #90b4ce;
+}
+
+.clockTimeP {
+  font-family: "Digi";
+  margin-top: 3vh;
+  font-size: 5.5vh;
+}
+.clockSpan {
+  font-size: 2vh;
+  margin-left: 1vw;
+  font-family: MonsterratRegular;
+}
