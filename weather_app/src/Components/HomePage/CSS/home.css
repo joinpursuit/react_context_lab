@@ -50,7 +50,7 @@ p {
   height: 100vh;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .container {
     height: 100px;
     flex-direction: row;
@@ -93,9 +93,9 @@ p {
   }
 
   #p {
-    /* height: 20vh; */
+    height: 20vh;
     font-size: unset;
     font-size: 17px;
     padding-bottom: 27px;
   }
-}
+} */

@@ -47,7 +47,7 @@ h3 {
   font-weight: bold;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .weatherDiv {
     display: flex;
     flex-direction: column;
@@ -64,4 +64,4 @@ h3 {
   .todayImg {
     margin-left: unset;
   }
-}
+} */

@@ -27,7 +27,7 @@ const NavBar = () => {
             </NavLink>
           </div>
 
-          <div className="holder">info</div>
+          {/* <div className="holder">info</div> */}
         </div>
       </div>
     </div>
