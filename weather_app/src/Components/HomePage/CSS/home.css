@@ -17,9 +17,9 @@
   background-color: #d8eefe;
   height: auto;
   align-items: center;
-  border: black;
+  /* border: black;
   border-width: thick;
-  border-style: dotted;
+  border-style: dotted; */
 }
 
 h1 {
@@ -47,12 +47,12 @@ p {
 }
 .homeContainer {
   margin-top: 160px;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
   .container {
-    height: 100px;
+    height: 115px;
     flex-direction: row;
     justify-content: space-evenly;
 
@@ -98,4 +98,4 @@ p {
     font-size: 17px;
     padding-bottom: 27px;
   }
-} */
+}

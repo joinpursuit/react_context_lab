@@ -6,7 +6,7 @@
 .clockApp {
   display: flex;
   justify-content: center;
-  background-color: #d8eefe;
+  /* background-color: #d8eefe; */
   height: 100vh;
   width: 85vw;
   margin-left: 5.2vw;
@@ -72,4 +72,17 @@
   height: 10vh;
   padding-left: 1vw;
   padding-right: 1vw;
+}
+
+@media (max-width: 600px) {
+  .clockApp {
+    background-color: unset;
+    height: 100vh;
+    width: 85vw;
+
+    margin-left: -53vw;
+  }
+  .towrap {
+    width: unset;
+  }
 }

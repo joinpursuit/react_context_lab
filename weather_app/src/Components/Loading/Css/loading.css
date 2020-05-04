@@ -15,3 +15,12 @@
   font-weight: 600;
   font-size: x-large;
 }
+
+@media (max-width: 600px) {
+  .loadingDiv {
+    margin-top: 232px;
+    margin-left: -105px;
+    width: 50vw;
+    height: 72vh;
+  }
+}
