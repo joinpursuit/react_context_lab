@@ -16,7 +16,7 @@ const WeatherDay = ({ weather }) => {
         <h2>Today</h2>
         <p className="time">{weather.current.weather[0].main}</p>
       </div>
-      <div id="container">
+      <div className="sunriseCont" id="container">
         <h2>Sunrise</h2>
         <p className="time">
           <Moment format="h:mm" unix>
@@ -25,7 +25,7 @@ const WeatherDay = ({ weather }) => {
           <span className="timeSpan">AM</span>
         </p>
       </div>
-      <div id="container">
+      <div className="sunriseCont" id="container">
         <h2>Sunset</h2>
         <p className="time">
           <Moment format="h:mm" unix>

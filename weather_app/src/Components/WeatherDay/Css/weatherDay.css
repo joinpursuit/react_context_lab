@@ -36,3 +36,19 @@
   font-size: small;
   font-weight: bolder;
 }
+
+@media (max-width: 600px) {
+  .todayImg {
+    margin-left: unset;
+  }
+
+  .dayDiv {
+    flex-wrap: wrap;
+  }
+
+  .sunriseCont {
+    margin-left: 6vw;
+    margin-bottom: 1vh;
+    margin-top: -3vh;
+  }
+}

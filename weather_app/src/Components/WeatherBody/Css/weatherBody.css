@@ -21,12 +21,14 @@
 
   padding: 10px;
   box-shadow: 5px 10px 8px #3da9fc;
+  background-color: #fffffe;
 }
 .divToScroll {
   overflow: scroll;
   height: 380px;
   overflow-x: hidden;
   scroll-snap-stop: always;
+  box-shadow: 0 0 10px #90b4ce;
 }
 
 span {
@@ -47,6 +49,10 @@ h3 {
   font-weight: bold;
 }
 
+.headDiv {
+  box-shadow: 0 0 10px #90b4ce;
+}
+
 @media (max-width: 600px) {
   .weatherDiv {
     display: flex;
@@ -57,11 +63,7 @@ h3 {
     margin-top: 30vh;
   }
 
-  #degrees {
-    margin-left: unset;
-  }
-
-  .todayImg {
-    margin-left: unset;
+  .dayDiv {
+    flex-wrap: wrap;
   }
 }

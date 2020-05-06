@@ -37,3 +37,13 @@
 #degSpan {
   font-size: initial;
 }
+
+@media (max-width: 600px) {
+  #degrees {
+    margin-left: unset;
+  }
+
+  #day {
+    width: 28vw;
+  }
+}
