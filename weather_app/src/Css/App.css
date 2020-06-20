@@ -1,0 +1,23 @@
+.App {
+  display: flex;
+  flex-direction: row;
+}
+.theme {
+  height: 25px;
+  border-radius: 4px;
+  margin-left: -140px;
+  width: 65px;
+  text-align: center;
+  background-color: #ef4565;
+}
+.theme:hover {
+  background-color: #094067;
+}
+
+#light {
+  background-color: #d8eefe;
+}
+
+#dark {
+  background-color: hsl(0, 0%, 20%);
+}

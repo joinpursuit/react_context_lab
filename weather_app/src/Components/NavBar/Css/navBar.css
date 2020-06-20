@@ -1,0 +1,57 @@
+.NavBar {
+  background-color: #3da9fc;
+  border-radius: 5px;
+  border-style: solid;
+  width: 225px;
+  /* height: 825px; */
+  /* padding: 10px; */
+  /* box-shadow: 5px 10px 8px #b8c1ec; */
+  /* box-shadow: 5px 10px 8px #90b4ce; */
+}
+
+.container {
+  font-family: monospace;
+  font-size: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 825px;
+  /* height: 100vh; */
+  justify-content: space-evenly;
+}
+
+.holder {
+  margin-top: 60px;
+  height: 206.25px;
+  border-bottom-style: double;
+  border-bottom-width: thin;
+  border-bottom-color: white;
+}
+
+.link {
+  text-decoration: none;
+  /* text-shadow: white; */
+  /* color: #2490b8; */
+  font-weight: 500;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  /* padding: 10px;
+  box-shadow: 5px 10px 8px #b8c1ec; */
+}
+#weather:hover {
+  transform: scale(1.3);
+}
+
+#weather {
+  /* background-image: url("../../../images/sun.svg"); */
+  /* background-color: azure; */
+  background-repeat: no-repeat;
+  height: 60px;
+  /* height: 10vh; */
+  margin-bottom: 5vh;
+}
+
+.link:active {
+  transform: scale(1.2);
+}

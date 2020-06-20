@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../../../fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MonsterratRegular";
+  src: url("../../../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+.homeDiv {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-top: 160px;
+
+  width: 56%;
+  margin: auto;
+  background-color: #d8eefe;
+  height: auto;
+  align-items: center;
+  /* border: black;
+  border-width: thick;
+  border-style: dotted; */
+}
+
+h1 {
+  font-family: RobotoRegular;
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #094067;
+  margin-top: 70px;
+}
+
+p {
+  font-family: MonsterratRegular;
+  font-size: 25px;
+  color: #5f6c7b;
+  font-weight: 500;
+  width: inherit;
+}
+
+.pContainer {
+  text-align: center;
+  padding-bottom: 75px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.homeContainer {
+  margin-top: 160px;
+  /* height: 100vh; */
+}
+
+@media (max-width: 600px) {
+  .container {
+    height: 115px;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    width: 100vw;
+  }
+
+  .theme {
+    margin-top: 20vh;
+    margin-left: -212px;
+  }
+
+  .homeContainer {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+  .NavBar {
+    height: unset;
+    width: unset;
+    border-radius: unset;
+  }
+
+  .holder {
+    margin-top: 135px;
+  }
+
+  .homeDiv {
+    margin-left: -55vw;
+    margin-top: 91px;
+    width: unset;
+  }
+  h1 {
+    margin-top: 35px;
+  }
+
+  .pContainer {
+    padding-bottom: unset;
+    width: 77vw;
+  }
+
+  #p {
+    height: 20vh;
+    font-size: unset;
+    font-size: 17px;
+    padding-bottom: 27px;
+  }
+}

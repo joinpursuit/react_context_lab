@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../../../fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MonsterratRegular";
+  src: url("../../../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+.dayDiv {
+  display: flex;
+
+  justify-content: space-evenly;
+  border-bottom-color: lightgray;
+  border-bottom-style: solid;
+  border-width: thin;
+  height: max-content;
+}
+
+#container {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+.todayImg {
+  margin-left: -30px;
+}
+
+.time {
+  font-size: initial;
+
+  margin-top: 27px;
+}
+.timeSpan {
+  font-size: small;
+  font-weight: bolder;
+}
+
+@media (max-width: 600px) {
+  .todayImg {
+    margin-left: unset;
+  }
+
+  .dayDiv {
+    flex-wrap: wrap;
+  }
+
+  .sunriseCont {
+    margin-left: 6vw;
+    margin-bottom: 1vh;
+    margin-top: -3vh;
+  }
+}

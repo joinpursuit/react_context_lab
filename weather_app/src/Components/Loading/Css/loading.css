@@ -1,0 +1,26 @@
+.loadingImg {
+  height: 300px;
+  width: 350px;
+  margin-left: inherit;
+}
+
+.loadingDiv {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  margin-left: 200px;
+}
+
+.loadingP {
+  font-weight: 600;
+  font-size: x-large;
+}
+
+@media (max-width: 600px) {
+  .loadingDiv {
+    margin-top: 232px;
+    margin-left: -105px;
+    width: 50vw;
+    height: 72vh;
+  }
+}

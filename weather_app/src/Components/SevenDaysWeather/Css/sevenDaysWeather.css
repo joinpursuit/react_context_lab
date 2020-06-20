@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../../../fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MonsterratRegular";
+  src: url("../../../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+.sevenDay {
+  display: flex;
+  align-items: center;
+  border-bottom-color: lightgray;
+  border-bottom-style: solid;
+  border-width: thin;
+  height: max-content;
+}
+
+.sevenDayImg {
+  height: 65px;
+  margin-right: 20px;
+}
+
+#day {
+  width: 125px;
+}
+
+#dayP {
+  font-size: inherit;
+  margin-top: 5px;
+}
+#degrees {
+  margin-left: 130px;
+  margin-top: 5px;
+  font-size: larger;
+}
+#degSpan {
+  font-size: initial;
+}
+
+@media (max-width: 600px) {
+  #degrees {
+    margin-left: unset;
+  }
+
+  #day {
+    width: 28vw;
+  }
+}
